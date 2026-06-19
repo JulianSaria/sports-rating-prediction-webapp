@@ -42,6 +42,6 @@ A React-based sports analytics web app for exploring team ratings and match pred
 
 ## Footnote
 
-This notebook serves for the purposes of PR1 project dealing with Sport result evaluating at the University Of Vienna in the winter semester 2023/2024.
+This notebook serves for the purposes of PR1 project dealing with sport result evaluating at the University Of Vienna in the winter semester 2023/2024.
 
 Author: Julian Saria
