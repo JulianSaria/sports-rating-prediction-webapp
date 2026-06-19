@@ -1,0 +1,124 @@
+.DataFetch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Column_header {
+  align-items: center;
+}
+
+.Column {
+  flex: 1;
+  margin: 10px;
+}
+
+.ColumnButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColumnButton button {
+  margin: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ColumnButton button:hover {
+  background-color: #2980b9;
+}
+
+.ColumnButton button.active {
+  background-color: #2ecc71; /* Change to the desired color for the active state */
+}
+
+.ColumnButton button:hover:not(.active) {
+  background-color: #3498db;
+}
+
+.Row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bet-box-green {
+  display: flex;
+  background-color: lightgreen;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bet-box-orange {
+  display: flex;
+  background-color: coral;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bet-box-red {
+  display: flex;
+  background-color: lightcoral;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+.bet-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.team-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+.win-percent_green {
+  font-size: 18px;
+  color: green;
+}
+
+.win-percent_red {
+  font-size: 18px;
+  color: red;
+}
+
+.win-percent_orange {
+  font-size: 18px;
+  color: orange;
+}
+
+.vs {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.playdate {
+  font-style: italic;
+}
