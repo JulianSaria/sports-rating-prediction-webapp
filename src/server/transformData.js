@@ -4,8 +4,10 @@ const transformData = (allMatchData) => {
     const matchList = [];
     allMatchData.map((playWeekData) =>
     {
+
         const $ = cheerio.load(playWeekData);
-        const playWeek = parseInt($('.match-round').text().split('.')[0]);
+        const playWeek = parseInt($('.round-head').first().text(), 10)
+        //const playWeek = parseInt($('.round-head').text().split('.')[0]);
 
         /*$('.round-head').each((index, element) => {
             const matchElement = $(element);
