@@ -9,7 +9,16 @@ const insertDataIntoTable = async (games, game_type) => {
                 pool.query(
                     `INSERT INTO ${pool.escapeId(game_type)} (game_ID, teamname_home, teamname_away, hometeam_score,
                                              awayteam_score, playdate, playweek, hometeam_result, awayteam_result)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                   ON DUPLICATE KEY UPDATE
+                       teamname_home = VALUES(teamname_home),
+                       teamname_away = VALUES(teamname_away),
+                       hometeam_score = VALUES(hometeam_score),
+                       awayteam_score = VALUES(awayteam_score),
+                       playdate = VALUES(playdate),
+                       playweek = VALUES(playweek),
+                       hometeam_result = VALUES(hometeam_result),
+                       awayteam_result = VALUES(awayteam_result)`,
                     [
                         game.gameID,
                         game.homeTeam,
@@ -23,10 +32,10 @@ const insertDataIntoTable = async (games, game_type) => {
                     ],
                     (err, res) => {
                         if (err) {
-                            console.error('Error creating table:', err);
+                            console.error('Error inserting or updating game:', err);
                             reject(err);
                         } else {
-                            console.log('Table created successfully');
+                            console.log('Game inserted or updated successfully');
                             resolve(res);
                         }
                     }

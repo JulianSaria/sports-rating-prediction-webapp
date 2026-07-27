@@ -4,14 +4,14 @@ const {hockey_games, table_tennis_games, soccer_games} = require("../config");
 const createDatabase = require("../createObjects/createDatabase");
 const createTable = require("../createObjects/createTables");
 const insertDataIntoTable = require("../insertData/insertDataIntoTables");
-//const deleteTable = require("../deleteTable");
+const deleteTable = require("../deleteTable");
 
 
 
-/*
+
 deleteTable("hockey_games");
 deleteTable("table_tennis_games");
-*/
+
 async function executeSequentially() {
     try {
         let promises = []
