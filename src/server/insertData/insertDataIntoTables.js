@@ -49,7 +49,7 @@ const insertDataIntoTable = async (games, game_type) => {
         console.log('All queries completed successfully');
     } finally {
         // Close the pool after all queries have finished
-        pool.end();
+        await pool.promise().end();
     }
 }
 
